@@ -76,7 +76,9 @@
     "package:win-32": "ARCH_VARIABLE=386 electron-builder --win --ia32",
     "package:win-64": "ARCH_VARIABLE=amd64 electron-builder --win --x64 ",
     "package:linux-32": "ARCH_VARIABLE=386 electron-builder -l --ia32",
-    "package:linux-64": "ARCH_VARIABLE=amd64 electron-builder -l --x64"
+    "package:linux-64": "ARCH_VARIABLE=amd64 electron-builder -l --x64",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "author": "Bytom",
   "license": "AGPL-3.0-only",
@@ -118,7 +120,8 @@
     "reselect": "^3.0.0",
     "sha.js": "^2.4.8",
     "toml": "~2.3.3",
-    "uuid": "~2.0.2"
+    "uuid": "~2.0.2",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "autoprefixer": "~6.7.7",
@@ -154,5 +157,6 @@
     "shelljs": "~0.7.4",
     "style-loader": "~0.13.1",
     "url-loader": "~0.5.7"
-  }
+  },
+  "snyk": true
 }
